@@ -1,0 +1,2339 @@
+<!DOCTYPE html>
+<html class="biz-udgothic-regular">
+
+<head>
+    <meta charset="UTF=8">
+    <title>第80回修猷大文化祭特設HP/福岡県立修猷館高等学校</title>
+    <meta name="description" content="第80回修猷大文化祭の特設ホームページです。">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-width">
+            <div class="header-logoandtitle">
+                <a class="header-logo" href="https://shuyu.fku.ed.jp/">
+                    <img src="./images/r07_bunka_001_daiji_1.png">
+                </a>
+            </div>
+            <button class="menu" aria-label="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const menuButton = document.querySelector(".menu");
+                    const headerMenu = document.querySelector(".header-site-menu");
+
+                    menuButton.addEventListener("click", () => {
+                        menuButton.classList.toggle("close");
+                        headerMenu.classList.toggle("is-show");
+                    });
+
+                    const menuLinks = document.querySelectorAll(".site-menu a");
+                    menuLinks.forEach(link => {
+                        link.addEventListener("click", () => {
+                            menuButton.classList.remove("close");
+                            headerMenu.classList.remove("is-show");
+                        });
+                    });
+                });
+            </script>
+            <div class="header-site-menu">
+                <nav class="site-menu">
+                    <ul>
+                        <li class="navtext"><a href="#top">トップ</a></li>
+                        <li class="navtext"><a href="#classkikaku">クラス企画</a></li>
+                        <li class="navtext"><a href="#cultureclub-kikaku">新聞部・文化部企画</a></li>
+                        <li class="navtext"><a href="#timeschedule">タイムスケジュール</a></li>
+                        <li class="navtext"><a href="sub.html#stage">ステージ</a></li>
+                        <li class="navtext"><a href="sub.html#bazaar-cafeteria">食堂・バザー</a></li>
+                        <li class="navtext"><a href="#map">マップ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-header" id="top">
+            <div class="daiji">
+                <img class="daiji-1" src="./images/r07_bunka_002_daiji_2.png">
+            </div>
+            <div class="time-container">
+                <h2>開催<br>まで</h2>
+                <div class="time-element">
+                    <div class="time"><span id="day"></span></div>
+                    <div class="timelog">
+                        <p>日</p>
+                    </div>
+                </div>
+                <p class="colon">：</p>
+                <div class="time-element">
+                    <div class="time"><span id="hour"></span></div>
+                    <div class="timelog">
+                        <p>時間</p>
+                    </div>
+                </div>
+                <p class="colon">：</p>
+                <div class="time-element">
+                    <div class="time"><span id="min"></span></div>
+                    <div class="timelog">
+                        <p>分</p>
+                    </div>
+                </div>
+                <p class="colon">：</p>
+                <div class="time-element">
+                    <div class="time"><span id="sec"></span></div>
+                    <div class="timelog">
+                        <p>秒</p>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+
+                        const countdownWrapper = document.querySelector(".countdown");
+
+                        const day = document.getElementById("day");
+                        const hour = document.getElementById("hour");
+                        const min = document.getElementById("min");
+                        const sec = document.getElementById("sec");
+
+                        const target = new Date(2026, 2, 20, 10, 0, 0);
+                        let timerId;
+
+                        function update() {
+                            const now = new Date();
+                            const diff = target - now;
+
+                            if (diff <= 0) {
+                                clearTimeout(timerId);
+                                if (countdownWrapper) countdownWrapper.style.display = "none";
+                                return;
+                            }
+
+                            const d = Math.floor(diff / 86400000);
+                            const h = Math.floor(diff / 3600000) % 24;
+                            const m = Math.floor(diff / 60000) % 60;
+                            const s = Math.floor(diff / 1000) % 60;
+
+                            day.textContent = String(d).padStart(2, "0");
+                            hour.textContent = String(h).padStart(2, "0");
+                            min.textContent = String(m).padStart(2, "0");
+                            sec.textContent = String(s).padStart(2, "0");
+
+                            const delay = 1000 - (Date.now() % 1000);
+                            timerId = setTimeout(update, delay);
+                        }
+
+                        update();
+                    });
+                </script>
+            </div>
+            <p class="date">令和8年3月20日 <small><small><small></small>(金・祝)</small></small>
+                <br>10:00-15:30
+                <br>令和8年3月21日 <small><small>(土)</small></small>
+                <br>9:00-15:00
+            </p>
+            <div class="another-page-button">
+                <a href="sub.html">
+                    <p class="btn btn--orange btn--radius">ステージ・食堂・バザー<br>はこちら</p>
+                </a>
+            </div>
+        </div>
+        <div class="section-gradient-top"></div>
+        <div class="slogan" id="slogan">
+            <h1 class="miryo-title">スローガン紹介</h1>
+            <div class="miryo">
+                <img class="miryo-daiji" src="images/r07_bunka_003_miryo-tate.png">
+                <p class="miryo-shousai">
+                    <span class="miryo-shousai-1">
+                        鬼了: 他を圧倒する熱量をもってひとつの事に打ち込む。<br>
+                        魅了: 企画を創り上げていく生徒たち本人も含め、第80回修猷大文化祭に関わる全てを魅了する。<br>
+                        未了: 全員の熱意で作り上げられた大文化祭は2日間で終わらず、ここで得た学びで未来を切り拓いていく。<br><br>
+                    </span>
+                    <span class="miryo-shousai-2">
+                        「鬼了」をもって「魅了」し、「未了」の大文化祭を目指す。
+                        <br>
+                        これらの意味を込め第80回修猷大文化祭のスローガンとする。
+                    </span>
+                </p>
+            </div>
+            <div class="section-gradient-bottom"></div>
+        </div>
+        <div class="message" id="message">
+            <h1>大文化祭によせて</h1>
+            <div class="message-box">
+                <img class="message-photo" src="./images/r07_bunka_004_kancho.jpg" alt="館長の写真">
+                <div class="message-text">
+                    <span class="name">野本準二</span>
+                    <br>
+                    <span class="yakushoku">館長</span>
+                    <br>
+                    <p>
+                        修猷館の学校行事の最大の意義は、生徒が自分たちの手で全てを創り上げることにある。行事の企画、内容の決定、当日までの準備、当日の運営、これら全てを自分たちで考え、協働しながら遂行する。当然数えきれないほどの大きな壁とぶつかるが、だから面白い。答えは君たちの中に無数にある。この経験を経て、修猷館から有為な人材が次々と生まれるのも当然だ。<br>
+                        第80回を数える修猷大文化祭。何のための大文化祭か。誰のための大文化祭か。どう関わり、何を感じたいのか。そして、それでいいのか。<br>
+                        誰もがこうした疑問と向き合い、この大文化祭を通じてしか味わえない経験をするはずだ。令和7年度の学びと成長の集大成。魅了するのは誰で、魅了されるのは誰なのだろう。楽しみだ。<br>
+                    </p>
+                </div>
+            </div>
+            <div class="message-box">
+                <img class="message-photo" src="./images/r07_bunka_006_uncho.jpg" alt="運営委員長の写真">
+                <div class="message-text">
+                    <span class="name">大西佑奈</span>
+                    <br>
+                    <span class="yakushoku">運営委員長</span>
+                    <br>
+                    <p>
+                        ばかみたいに真っ直ぐ、やりたいことに向き合う。そんな当たり前ではないことが出来る。それが修猷大文化祭である。<br>
+                        今日までの過程の中には、避けられなかった対立も、葛藤もあった。それでも私達は向き合い、全力でぶつかり合いながら共に走ってきた。理想を理想のまま終わらせない努力を積み上げた。私達が今日まで費やした時間、労力、想像、工夫……その全てが今日の熱をつくりあげてきた。全員が主役だ。<br>
+                        “あなたの大文化祭”だ。あなたの企画の熱が、ステージの熱が、そして何よりもあなた自身の熱が、すべてを魅了する準備はもう出来ている。そうだろう？<br>
+                        修猷生よ、私達の「鬼了」をもって全てを「魅了」し、「未了」の第80回修猷大文化祭を実現しようではないか。私達の、私達にしかできない修猷大文化祭を、すべてに刻み込んでやろう。<br>
+                    </p>
+                </div>
+            </div>
+            <div class="message-box">
+                <img class="message-photo" src="./images/r07_bunka_005_soumu.jpg" alt="総務の写真">
+                <div class="message-text">
+                    <span class="name">島田壮大</span>
+                    <br>
+                    <span class="yakushoku">総務</span>
+                    <br>
+                    <p>
+                        本気とはなんだろうか。青春とはなんだろうか。<br>
+                        その答えを示すために、仲間と協力し、楽しみ、時にぶつかりながら、全員が同じ方向を向いて努力を重ね、今日という日を迎えた。<br>
+                        修猷大文化祭を唯一無二のものにするために、私たちは本気で企画やステージ、作品を創り上げてきた。<br>
+                        だから、仲間を、観客を、そして自分を「魅了」する。<br>
+                        そのために積み上げてきた全てを、今日ここで開花させよう。<br>
+                        すると、その熱は新たな遺伝子となり、修猷のDNAに刻まれていくだろう。<br>
+                        大文化祭とはなんだろうか。<br>
+                        修猷とはなんだろうか。<br>
+                        あなたは今日、その答えの輪郭を目の当たりにすることとなる。<br>
+                        ここでヒントを見つけ、いつか答えに辿り着いてほしい。<br><br>
+
+                        さあ、共に歴史を紡ごう。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section-unified-bg">
+            <div class="timeschedule" id="timeschedule">
+                <h1>タイムスケジュール</h1>
+                <div class="timeschedule-box">
+                    <div class="timeschedule-picture">
+                        <p class="timeschedule-text">タイムスケジュール1日目</p>
+                        <br>
+                        <div class="tmb">
+                            <label for="pop-01">
+                                <img src="images/r07_bunka_087_timeschedule_1.png" alt="image_01" class="tmb_img">
+                            </label>
+                            <input type="checkbox" value="" id="pop-01">
+                            <div class="popup">
+                                <label for="pop-01" class="popup__btn"></label>
+                                <label for="pop-01" class="popup__btnarea"></label>
+                                <div class="popup__img">
+                                    <img src="images/r07_bunka_087_timeschedule_1.png" alt="image_01">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tmb">
+                            <label for="pop-02">
+                                <img src="images/r07_bunka_088_timeschedule_2.png" alt="image_01" class="tmb_img">
+                            </label>
+                            <input type="checkbox" value="" id="pop-02">
+                            <div class="popup">
+                                <label for="pop-02" class="popup__btn"></label>
+                                <label for="pop-02" class="popup__btnarea"></label>
+                                <div class="popup__img">
+                                    <img src="images/r07_bunka_088_timeschedule_2.png" alt="image_01">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeschedule-picture">
+                        <p class="timeschedule-text">タイムスケジュール2日目</p>
+                        <br>
+                        <div class="tmb">
+                            <label for="pop-01">
+                                <img src="images/r07_bunka_089_timeschedule_3.png" alt="image_01" class="tmb_img">
+                            </label>
+                            <input type="checkbox" value="" id="pop-01">
+                            <div class="popup">
+                                <label for="pop-01" class="popup__btn"></label>
+                                <label for="pop-01" class="popup__btnarea"></label>
+                                <div class="popup__img">
+                                    <img src="images/r07_bunka_089_timeschedule_3.png" alt="image_01">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tmb">
+                            <label for="pop-02">
+                                <img src="images/r07_bunka_090_timeschedule_4.png" alt="image_01" class="tmb_img">
+                            </label>
+                            <input type="checkbox" value="" id="pop-02">
+                            <div class="popup">
+                                <label for="pop-02" class="popup__btn"></label>
+                                <label for="pop-02" class="popup__btnarea"></label>
+                                <div class="popup__img">
+                                    <img src="images/r07_bunka_090_timeschedule_4.png" alt="image_01">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.querySelectorAll(".popup__img").forEach(container => {
+
+                    const img = container.querySelector("img");
+
+                    let scale = 1;
+                    let minScale = 1;
+                    let maxScale = 5;
+
+                    let posX = 0;
+                    let posY = 0;
+
+                    let isDragging = false;
+                    let startX, startY;
+
+                    function updateTransform() {
+                        img.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
+                    }
+
+                    function resetZoom() {
+                        scale = 1;
+                        posX = 0;
+                        posY = 0;
+                        updateTransform();
+                    }
+
+                    // ===== トラックパッドピンチ（ctrl + wheel）=====
+                    img.addEventListener("wheel", e => {
+                        if (e.ctrlKey) {
+                            e.preventDefault();
+
+                            const rect = img.getBoundingClientRect();
+                            const offsetX = e.clientX - rect.left;
+                            const offsetY = e.clientY - rect.top;
+
+                            const zoom = -e.deltaY * 0.01;
+                            const newScale = Math.min(Math.max(minScale, scale + zoom), maxScale);
+
+                            const scaleRatio = newScale / scale;
+
+                            posX -= (offsetX - posX) * (scaleRatio - 1);
+                            posY -= (offsetY - posY) * (scaleRatio - 1);
+
+                            scale = newScale;
+                            updateTransform();
+                        }
+                    }, { passive: false });
+
+                    // ===== マウスドラッグ移動 =====
+                    img.addEventListener("mousedown", e => {
+                        if (scale > 1) {
+                            isDragging = true;
+                            startX = e.clientX - posX;
+                            startY = e.clientY - posY;
+                            container.style.cursor = "grabbing";
+                        }
+                    });
+
+                    window.addEventListener("mousemove", e => {
+                        if (isDragging) {
+                            posX = e.clientX - startX;
+                            posY = e.clientY - startY;
+                            updateTransform();
+                        }
+                    });
+
+                    window.addEventListener("mouseup", () => {
+                        isDragging = false;
+                        container.style.cursor = "grab";
+                    });
+
+                    // ===== ダブルクリックでリセット =====
+                    img.addEventListener("dblclick", resetZoom);
+
+                    // ===== ポップアップ閉じたらリセット =====
+                    const checkbox = container.closest(".tmb").querySelector("input[type='checkbox']");
+                    checkbox.addEventListener("change", () => {
+                        if (!checkbox.checked) {
+                            resetZoom();
+                        }
+                    });
+
+                });
+            </script>
+        </div>
+        <div class="gradation"></div>
+        <div class="class-kikaku" id="classkikaku">
+            <div class="Container1">
+                <h1 class="shousai-title">1年生クラス企画</h1>
+                <div class="Box-Container1">
+                    <div class="Box1">
+                        <p class="class">体験<span class="place"></span>1年1組<br>北棟4階 1-1教室<br><span
+                                class="title"><small>Hope to
+                                    chocolate<span class="place"></span>~私、この国救うので。~</small></span></p>
+                        <img class="img-class" src="./images/r07_bunka_007_1-1.png">
+                        <p class="class-shousai">
+                            あなたは、異世界に派遣された精鋭。<br>
+                            謎をとき、チョコレートを完成させ、国を救ってくれ！！！
+                        </p>
+                    </div>
+                    <div class="Box1">
+                        <p class="class">体験<span class="place"></span>1年2組<br>中棟5階 大講義室<br><span
+                                class="title">シマノコタエ</span>
+                        </p>
+                        <img class="img-class" src="./images/r07_bunka_008_1-2.jpg">
+                        <p class="class-shousai">
+                            お化け屋敷×脱出を実現させた超・没入型企画が、現代社会に根づく判断に問いかける。最後に残るのは単なる恐怖か、それとも——
+                        </p>
+                    </div>
+                    <div class="Box1">
+                        <p class="class">展示<span class="place"></span>1年3組<br>南棟2階
+                            3-8教室<br><span class="title">ここから先、1億年前の彼方より</span></p>
+                        <img class="img-class" src="./images/r07_bunka_009_1-3.png">
+                        <p class="class-shousai">
+                            迷い込めばここは白亜紀の世界。ジャングルを進んだ先には恐竜の動く影……さあ、あなたも白亜紀の世界へ冒険しませんか？
+                        </p>
+                    </div>
+                    <div class="Box1">
+                        <p class="class">展示<span class="place"></span>1年4組<br>北棟4階 1-3教室<br><span
+                                class="title"><ruby>神話協奏曲<rt>ミスコンチェルト</rt></ruby></span></p>
+                        <img class="img-class" src="./images/r07_bunka_010_1-4.jpg">
+                        <p class="class-shousai">
+                            4つの神話が1-4に今集結！！
+                            <br>迫力満点のあのmyth(神話)といざご対面。
+                            <br>非日常の世界へようこそ！！
+                        </p>
+                    </div>
+                    <div class="Box1">
+                        <p class="class">展示<span class="place">1年5組</span><br>南棟2階 3-6教室<br><span
+                                class="title">リトルイスタンブール</span></p>
+                        <img class="img-class" src="./images/r07_bunka_011_1-5.jpeg">
+                        <p class="class-shousai">
+                            現トルコの最大都市であり、「永遠の都」イスタンブール。そこに溶け込んだイスラム文化。その内に秘められたイスラム世界の魅力とは！？
+                        </p>
+                    </div>
+                    <div class="Box1">
+                        <p class="class">展示<span class="place"></span>1年6組<br>南棟4階
+                            1-10教室<br><span class="title">e1evat6rRTOS</span></p>
+                        <img class="img-class" src="./images/r07_bunka_012_1-6.png">
+                        <p class="class-shousai">
+                            e1evat6rRTOSは皆さんを現代から昭和に連れていきます。活気あふれる昭和の時代で、あなたは何を感じ、思いますか？
+                        </p>
+                    </div>
+                    <div class="Box1">
+                        <p class="class">展示・体験<span class="place"></span>1年7組<br>南棟4階
+                            1-7教室<br><span class="title">星空鉄道777</span>
+                        </p>
+                        <img class="img-class" src="./images/r07_bunka_013_1-7.jpeg">
+                        <p class="class-shousai">
+                            列車に乗った私たちは気がつくと宇宙に着いていました。ストーリーに沿った体験とこだわりの詰まった展示を合わせた企画です。
+                        </p>
+                    </div>
+                    <div class="Box1">
+                        <p class="class">展示・体験<span class="place"></span>1年8組<br>北棟3階
+                            2-1教室<br><span class="title">今日、不況になりました。</span></p>
+                        <img class="img-class" src="./images/r07_bunka_014_1-8.jpg">
+                        <p class="class-shousai">
+                            1929年ウォール街での株式市場の暴落から始まった世界恐慌、正解のない選択の先に待つのは希望か絶望か。
+                        </p>
+                    </div>
+                    <div class="Box1">
+                        <p class="class">展示<span class="place"></span>1年9組<br>南棟4階 1-9教室<br><span
+                                class="title">キュウ。</span></p>
+                        <img class="img-class" src="./images/r07_bunka_015_1-9.png">
+                        <p class="class-shousai">
+                            多分、回転は寿命の長さより大切なものだと思う。だからこの場は、僕の命にかえてでも地球を回す。
+                        </p>
+                    </div>
+                    <div class="Box1">
+                        <p class="class">展示・公演<span class="place"></span>1年10組<br>北棟2階
+                            3-2教室,講堂<br><span class="title">蕾のままの約束</span></p>
+                        <img class="img-class" src="./images/r07_bunka_016_1-10.jpg">
+                        <p class="class-shousai">
+                            夕日の海で交わされた、ひとつの約束。国や時代に翻弄されながら、その想いはどこへ向かうのか——
+                        </p>
+                    </div>
+                    <div class="Box1">
+                        <p class="class">体験<span class="place"></span>1年11組<br>中棟5階 講義室<br><span class="title">血
+                                ~血液の循環について~</span>
+                        </p>
+                        <img class="img-class" src="./images/r07_bunka_017_1-11.jpg">
+                        <p class="class-shousai">
+                            今日からキミは赤血球！一人前の赤血球を目指して、いろんな器官を巡り、さまざまな仕事をこなして、血液循環迷路を攻略しよう！
+                        </p>
+                    </div>
+                </div>
+                <div class="Arrow1 left">＜</div>
+                <div class="Arrow1 right">＞</div>
+                <script>
+                    const boxContainer = document.querySelector('.Box-Container1');
+                    const leftArrow = document.querySelector('.Arrow1.left');
+                    const rightArrow = document.querySelector('.Arrow1.right');
+
+                    const scrollAmount = 360; // Box300 + gap10
+
+                    leftArrow.addEventListener('click', () => {
+                        boxContainer.scrollBy({
+                            left: -scrollAmount,
+                            behavior: 'smooth'
+                        });
+                    });
+
+                    rightArrow.addEventListener('click', () => {
+                        boxContainer.scrollBy({
+                            left: scrollAmount,
+                            behavior: 'smooth'
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="Container2">
+            <h1>2年生クラス企画</h1>
+            <div class="Box-Container2">
+                <div class="Box2">
+                    <p class="class">展示・体験<span class="place"></span>2年1組<br>北棟2階 3-1教室<br><span
+                            class="title">廻る冥界Egypt</span>
+                    </p>
+                    <img class="img-class" src="images/r07_bunka_018_2-1.png">
+                    <br>
+                    <img class="class-shousai" src="images/r07_bunka_019_2-1-shousai.png">
+                </div>
+                <div class="Box2">
+                    <p class="class">展示・公演<span class="place"></span>2年2組<br>北棟2階 3-5教室<br><span
+                            class="title">ニノニアンナイト</span>
+                    </p>
+                    <img class="img-class" src="./images/r07_bunka_020_2-2.JPG">
+                    <p class="class-shousai">
+                        人々が寝静まった街をコーヒーの香りと進んで行けば、聞こえてくる千夜の物語。ニノニアンナイトへ、ようこそ。
+                    </p>
+                </div>
+                <div class="Box2">
+                    <p class="class">展示・体験<span class="place"></span>2年3組<br>中棟2階 大講義室<br><span class="title">平安の間<span
+                                class="place"></span>～千年の雅に招かれて～</span>
+                    </p>
+                    <img class="img-class" src="./images/r07_bunka_021_2-3.png">
+                    <p class="class-shousai">
+                        一歩踏み入れれば、平安の時間が静かに流れ出す。静けさに包まれ、平安の雅が心へ満ちてゆくひとときを。
+                    </p>
+                </div>
+                <div class="Box2">
+                    <p class="class">展示<span class="place"></span>2年4組<br>北棟2階 3-4教室<br><span class="title">Dia de los
+                            Muertos<span class="place"></span>―死者を想う日―</span>
+                    </p>
+                    <img class="img-class" src="./images/r07_bunka_022_2-4.png">
+                    <p class="class-shousai">
+                        メキシコの死者の日を再現しました。<br>
+                        2-4らしさと世界観を両立した展示です。<br>
+                        日本とは違う死生観を感じてみませんか？
+                    </p>
+                </div>
+                <div class="Box2">
+                    <p class="class">展示・体験<span class="place"></span>2年5組<br>中棟2階 3-11教室<br><span
+                            class="title">九份二景</span>
+                    </p>
+                    <img class="img-class" src="./images/r07_bunka_023_2-5.jpg">
+                    <p class="class-shousai">
+                        台湾北部に佇む町「九份」を再現。狭い路地や赤い提灯が織りなす幻想的な景色がここに。異国の街並みに迷い込んでみませんか？
+                    </p>
+                </div>
+                <div class="Box2">
+                    <p class="class">展示・体験<span class="place"></span>2年6組<br>南棟3階 2-6教室<br><span
+                            class="title">ピタゴラス医ッ師</span>
+                    </p>
+                    <img class="img-class" src="./images/r07_bunka_024_2-6.png">
+                    <p class="class-shousai">
+                        インフルエンザの感染から回復まで、体内の攻防をピタゴラ装置で再現。驚きの連鎖で知る生体防御の仕組みをぜひご体感ください！
+                    </p>
+                </div>
+                <div class="Box2">
+                    <p class="class">展示<span class="place"></span>2年7組<br>南棟3階 2-7教室<br><span
+                            class="title">来た、見た、2-7<span class="place"></span>~ローマの栄光と影~</span>
+                    </p>
+                    <img class="img-class" src="./images/r07_bunka_025_2-7.jpg">
+                    <p class="class-shousai">
+                        時は帝政期ローマ帝国、この時代は市民たちの生活が最も平和で栄えていた。当時の市民たちの生活をぜひご覧ください。
+                    </p>
+                </div>
+                <div class="Box2">
+                    <p class="class">展示・体験<span class="place"></span>2年8組<br>南棟3階 2-8教室<br><span
+                            class="title">３Ｄ星月夜</span>
+                    </p>
+                    <img class="img-class" src="./images/r07_bunka_026_2-8.jpg">
+                    <p class="class-shousai">
+                        フィンセント・ファン・ゴッホの名画、『星月夜』を待望の３Ｄ化！巨大な星月夜に入り込み、ようこそボンソワール。
+                    </p>
+                </div>
+                <div class="Box2">
+                    <p class="class">展示・体験<span class="place"></span>2年9組<br>北棟4階 1-2教室<br><span
+                            class="title"><small>THE BUBBLE 198X<span
+                                    class="place"></span><small>〜働きすぎにもほどがある〜</small></small></span>
+                    </p>
+                    <img class="img-class" src="./images/r07_bunka_027_2-9.png">
+                    <p class="class-shousai">
+                        #24 時間戦えますか？ #上司命令絶対厳守# 企業戦士#ジュリ扇乱舞#ﾊﾞﾌﾞﾙﾝﾊﾞｶﾞﾝﾊﾞﾙﾝﾊﾞ #26 時はお立ち台 #ギラギラミラーボール
+                    </p>
+                </div>
+                <div class="Box2">
+                    <p class="class">展示・体験<span class="place"></span>2年10組<br><span class="place">中棟4階
+                            1-11教室</span><br><span class="title">周遊きっぷ</span></p>
+                    <img class="img-class" src="./images/r07_bunka_028_2-10.jpg">
+                    <p class="class-shousai">
+                        修猷の教室で世界を周遊、といったテーマで世界3ヶ国を巡る体験を再現。<br>
+                        日本では感じられない様々な価値観を体験せよ。
+                    </p>
+                </div>
+                <div class="Box2">
+                    <p class="class">展示・公演<span class="place"></span>2年11組<br><span class="place">中棟3階
+                            2-11教室</span><br><span class="title">XRONO EXPO <small>クロノエキスポ</small></span></p>
+                    <img class="img-class" src="./images/r07_bunka_029_2-11.jpg">
+                    <p class="class-shousai">
+                        万博を舞台に繰り広げられる物語――“時空”とはなんたるか？この企画を通して、皆さんに考えていただきたい。
+                    </p>
+                </div>
+            </div>
+            <div class="Arrow2 left">＜</div>
+            <div class="Arrow2 right">＞</div>
+            <script>
+                const boxContainer2 = document.querySelector('.Box-Container2');
+                const leftArrow2 = document.querySelector('.Arrow2.left');
+                const rightArrow2 = document.querySelector('.Arrow2.right');
+
+                const scrollAmount2 = 360; // Box300 + gap10
+
+                leftArrow2.addEventListener('click', () => {
+                    boxContainer2.scrollBy({
+                        left: -scrollAmount2,
+                        behavior: 'smooth'
+                    });
+                });
+
+                rightArrow2.addEventListener('click', () => {
+                    boxContainer2.scrollBy({
+                        left: scrollAmount2,
+                        behavior: 'smooth'
+                    });
+                });
+            </script>
+        </div>
+        <div class="cultureclub-kikaku" id="cultureclub-kikaku">
+            <h1>新聞部・文化部企画</h1>
+            <div class="Container3">
+                <div class="Box-Container3">
+                    <div class="Box">
+                        <p class="class">展示<span class="place"></span>新聞部<br>2階南ホール<br><span
+                                class="title">ブンブン新ブン部はじめますよ</span>
+                        </p>
+                        <img class="img-class" src="./images/r07_bunka_033_shinbun.jpg">
+                        <p class="class-shousai">
+                            過去の新聞を配布中です！その他にも修猷新聞の魅力をたっぷり詰め込んだ展示をしています。あなたも修猷新聞の虜に……！
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">部誌配布<span class="place"></span>文藝部<br>2階北ホール<br><span class="title">北斗112号
+                                —刻む—</span>
+                        </p>
+                        <img class="img-class" src="./images/r07_bunka_032_bungei.jpg">
+                        <p class="class-shousai">
+                            文藝部では今年も部誌「北斗」を配布します。<br>
+                            今回テーマの「刻む」に沿って部員たちで創作をしました。<br>
+                            是非お越しください。
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">公演<span class="place"></span>演劇部<br>講堂<br></p>
+                        <img class="engeki-title" src="images/r07_bunka_091_engeki_title.png">
+                        <img class="img-class" src="./images/r07_bunka_049_engeki.png">
+                        <p class="class-shousai">
+                            生徒創作の30分劇2本立て！笑いあり、涙あり、感動あり！今伝えたいメッセージを込めました。ぜひご観劇ください！
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">展示・上映<span class="place"></span>映画制作部<br>中棟3階
+                            階段教室<br><span class="title">シネマ修猷</span></p>
+                        <img class="img-class" src="./images/r07_bunka_037_eiga.jpg">
+                        <p class="class-shousai">
+                            eiga worldcup 2025 ノミネート作品をはじめとしたオリジナル映画を上映します。ぜひお越しください！
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">展示・実演<span class="place"></span>物理部<br>管理棟3階
+                            物理実験室<br><span class="title">物理の目で見るピタゴラ装置</span></p>
+                        <img class="img-class" src="./images/r07_bunka_047_physics.png">
+                        <p class="class-shousai">
+                            私達の身の回りにある自然現象。その当たり前がこんなにも面白く、奥深いということをピタゴラ装置を通して味わってみませんか。
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">体験・実演<span class="place"></span>化学部<br>管理棟3階
+                            化学実験室<br><span class="title">魅せる化学</span></p>
+                        <img class="img-class" src="./images/r07_bunka_044_chemistry.png">
+                        <p class="class-shousai">
+                            象の歯磨き粉など、見て楽しめる実験を用意しました。ぜひお越しください。
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">講演<span class="place"></span>生物研究部<br>管理棟3階
+                            生物実験室<br><span class="title">絶滅 ~ニホンアシカ~</span></p>
+                        <img class="img-class" src="./images/r07_bunka_045_biology.jpg">
+                        <p class="class-shousai">
+                            私たち生物部は絶滅した生物（主にニホンアシカ）について講義を行います。本物の剥製も見ることができます。ぜひ来てください！
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">体験<span class="place"></span>数学研究部<br>北棟2階
+                            3-3教室<br><span class="title">修猷生の愛した数式</span></p>
+                        <img class="img-class" src="./images/r07_bunka_031_math.jpg">
+                        <p class="class-shousai">
+                            部員作成問題の配布と2種のスコアアタックを行います。問題は取り組み易いものから難問奇問まで。挑戦をお待ちしております！
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">展示<span class="place"></span>写真部<br>4階北ホール<br><span class="title">core</span>
+                        </p>
+                        <img class="img-class" src="./images/r07_bunka_038_photo.png">
+                        <p class="class-shousai">
+                            部員の〇〇coreを展示します。coreとは美学や世界観のことです。それぞれの想いや美しさが詰まった作品を是非見に来てください。
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">公演<span class="place"></span>コーラス部<br>北棟5階 音楽室,講堂<br><span class="title">Spring
+                                Concert</span></p>
+                        <img class="img-class" src="./images/r07_bunka_041_chorus.png">
+                        <p class="class-shousai">
+                            私たちコーラス部の1年間の集大成となるコンサートです。<br>
+                            お客様に合唱の楽しさと感動をお伝えします。
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">公演<span class="place"></span>吹奏楽部<br><span
+                                class="place">1日目：中庭,2日目：講堂</span><br><span class="title">Animato, con passione</span>
+                        </p>
+                        <img class="img-class" src="./images/r07_bunka_048_wind.png">
+                        <p class="class-shousai">
+                            ポップスから吹奏楽の名曲まで！聴いてくださる全ての人を魅了します！！58人で紡ぐ唯一無二のステージをあなたに。
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">展示・体験<span class="place"></span>美術部<br>北棟5階 美術室<br><span
+                                class="title">音と色のパレット</span>
+                        </p>
+                        <img class="img-class" src="./images/r07_bunka_042_art.jpg">
+                        <p class="class-shousai">
+                            好きな曲をイメージした作品展示、来場者が絵を描き曲を作る合同制作を行います。しおりやキーホルダーの配布も行います。
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">展示・実演<span class="place"></span>書道部<br>南棟2階
+                            3-9・3-10教室,中庭<br><span class="title">響心</span></p>
+                        <img class="img-class" src="./images/r07_bunka_035_shodou.jpeg">
+                        <p class="class-shousai">
+                            書道とは、一人一人の「今」の想いを表現する芸術です。<br>
+                            展示作品も、パフォーマンスもあなたに心に響くことと思います。
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">体験<span class="place"></span>ESS部<br>南棟4階 1-8教室<br><span class="title">Let’s
+                                hunt! ~St.Patrick’s Day~</span></p>
+                        <img class="img-class" src="./images/r07_bunka_030_ESS.jpeg">
+                        <p class="class-shousai">
+                            先日、世界中で St. Patrick’s Day が楽しまれた。<br>
+                            さぁ、貴方も体験しよう、妖精が隠した宝を探しながら。
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">販売<span class="place"></span>JRC部<br>1Fピロティ<br><span
+                                class="title">六光星ストラップの販売</span>
+                        </p>
+                        <img class="img-class" src="./images/r07_bunka_043_JRC.png">
+                        <p class="class-shousai">
+                            修猷館JRC部の部員が心を込めて作成した六光星ストラップを販売します。売上金はボランティア団体へ寄付します。
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">展示・実演<span class="place"></span>華道部<br>4階南ホール,南棟4階
+                            1-6教室<br><span class="title">千華万華</span></p>
+                        <img class="img-class" src="./images/r07_bunka_040_kadou.jpg">
+                        <p class="class-shousai">
+                            部員それぞれの感性で生けた個人作品の展示と、迫力ある大作実演で、お花の美しさや華道の魅力を伝えます！
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">実演<span class="place"></span>茶道部<br>管理棟5階
+                            和作法室,中庭<br><span class="title">一期一会<span class="place"></span>～お客様を魅了するお茶会～</span></p>
+                        <img class="img-class" src="./images/r07_bunka_046_tea.png">
+                        <p class="class-shousai">
+                            管理棟5階和作法室でお茶会を行います。<br>
+                            各回開始30分前から受付開始します。<br>
+                            茶道初心者も大歓迎！部員一同お待ちしています。
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">展示・体験<span class="place"></span>パソコン部<br>中棟4階
+                            パソコン室<br><span class="title">From Digital</span></p>
+                        <img class="img-class" src="./images/r07_bunka_039_computer.png">
+                        <p class="class-shousai">
+                            部員が制作した、イラスト・音楽・ゲームなどなどを展示します。
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">実演<span class="place"></span>ディベート部<br>南棟2階
+                            3-7教室<br><span class="title">人生最適化計画</span></p>
+                        <img class="img-class" src="./images/r07_bunka_034_debate.jpg">
+                        <p class="class-shousai">
+                            附設、襲来。<br>
+                            様々な論題でディベートをします。<br>
+                            理想の人間とはどんな人なのでしょうか？
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">展示・体験<span class="place"></span>放送部<br>北棟3階
+                            2-2教室<br><span class="title">VOICE<span class="place"></span>~Behind the Mic~</span></p>
+                        <img class="img-class" src="./images/r07_bunka_036_housou.png">
+                        <p class="class-shousai">
+                            私達の周りに溢れる、様々なVOICE。その声は、どのようにして生まれるのか。
+                            <br>「声で伝える」放送部の魅力に迫る。
+                        </p>
+                    </div>
+                </div>
+                <div class="Arrow3 left">＜</div>
+                <div class="Arrow3 right">＞</div>
+                <script>
+                    const boxContainer3 = document.querySelector('.Box-Container3');
+                    const leftArrow3 = document.querySelector('.Arrow3.left');
+                    const rightArrow3 = document.querySelector('.Arrow3.right');
+
+                    const scrollAmount3 = 360; // Box300 + gap10
+
+                    leftArrow3.addEventListener('click', () => {
+                        boxContainer3.scrollBy({
+                            left: -scrollAmount3,
+                            behavior: 'smooth'
+                        });
+                    });
+
+                    rightArrow3.addEventListener('click', () => {
+                        boxContainer3.scrollBy({
+                            left: scrollAmount3,
+                            behavior: 'smooth'
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="tenji-volunteer" id="tenji-volunteer">
+            <div class="Container7">
+                <h1>展示有志</h1>
+                <div class="Box-Container7">
+                    <div class="Box">
+                        <p class="class">展示・体験<span class="place"></span>家庭クラブ委員会<br>3階南ホール<br><span
+                                class="title">衣食住の「循環」</span></p>
+                        <img class="img-class" src="./images/r07_bunka_052_katei.png">
+                        <p class="class-shousai">
+                            「循環」を実現させる鍵は、私たちの身近な「衣食住」に潜んでいます。その鍵を、私たちの活動を通してご紹介します！
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">体験<span class="place"></span>クイズ研究会<br>南棟3階 2-9教室<br><span
+                                class="title">競技クイズの世界</span></p>
+                        <img class="img-class" src="./images/r07_bunka_050_quiz.png">
+                        <p class="class-shousai">
+                            早押しクイズ体験を常時行っています！！どなたでも楽しめるようなクイズを用意していますのでぜひ来てください！！
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">展示<span class="place"></span>umi<br>3階北ホール<br><span class="title">絵画展示</span>
+                        </p>
+                        <img class="img-class" src="./images/r07_bunka_051_umi.jpeg">
+                        <p class="class-shousai">
+                            一年の個人展示です。<br>
+                            気が向いたら立ち止まってみてください。
+                        </p>
+                    </div>
+                    <div class="Box">
+                        <p class="class">展示・講演<span class="place"></span>海外研修<br>北棟3階 2-3教室<br><span
+                                class="title">アメリカ＆アジア研修</span></p>
+                        <img class="img-class" src="./images/r07_bunka_053_americaasia.jpg">
+                        <p class="class-shousai">
+                            アメリカ研修、アジア研修で得た学びを報告します。常設展示に加え、参加生徒によるプレゼンやビデオ上映も行うのでぜひ来てね！
+                        </p>
+                    </div>
+                </div>
+                <div class="Arrow7 left">＜</div>
+                <div class="Arrow7 right">＞</div>
+                <script>
+                    const boxContainer7 = document.querySelector('.Box-Container7');
+                    const leftArrow7 = document.querySelector('.Arrow7.left');
+                    const rightArrow7 = document.querySelector('.Arrow7.right');
+
+                    const scrollAmount7 = 360; // Box300 + gap10
+
+                    leftArrow7.addEventListener('click', () => {
+                        boxContainer7.scrollBy({
+                            left: -scrollAmount7,
+                            behavior: 'smooth'
+                        });
+                    });
+
+                    rightArrow7.addEventListener('click', () => {
+                        boxContainer7.scrollBy({
+                            left: scrollAmount7,
+                            behavior: 'smooth'
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="annai" id="map">
+            <div>
+                <h1>マップ</h1>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.8249999960913!2d130.356341!3d33.5838927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354193a435436e39%3A0x27c45e52483debbe!2z56aP5bKh55yM56uL5L-u54y36aSo6auY562J5a2m5qCh!5e0!3m2!1sja!2sjp!4v1766908186345!5m2!1sja!2sjp"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            <div class="kaijoannai" id="kaijoannai">
+                <h1>校内図</h1>
+                <img class="shuyu-map" src="./images/r07_bunka_055_kaijoannai.png">
+            </div>
+        </div>
+
+        <div class="onegai">
+            <h1>お願い</h1>
+            <p>
+                ◦本校で撮影、録音した写真・動画・音声のSNS等を利用した発信・拡散は禁止です。<br>
+                ◦校舎内、中庭の芝生の上での食事は禁止です。<br>
+                ◦学校の敷地内は全面禁煙です。<br>
+                ◦校舎内のゴミ箱は使用せず、ゴミは各自でお持ち帰りください。<br>
+                ◦お帰りの際は六光賞への投票をお願いします。<br>
+                ◦迷子や落とし物、その他お困りごとなどがございましたら、1Fピロティのインフォメーションセンターまでお越しください。<br>
+                ◦パンフレットを撮影してSNS 等で発信・拡散しないでください。<br>
+                ◦飲食物は、バザー・食堂・売店で販売しています。<br>
+                ◦エレベーターを必要とされる方は管理棟のエレベーターをご利用ください。<br>
+                ◦お手洗いはピロティと教室棟各階にございます。詳しい場所につきましては会場案内図をご参照ください。
+            </p>
+        </div>
+        <div class="space"></div>
+    </main>
+    <footer class="footer">
+        <div class="footer-0">
+            <a href="https://shuyu.fku.ed.jp/">
+                <img class="footer-logo" src="./images/r07_bunka_001_daiji_1.png">
+            </a>
+            <p class="footer-title">福岡県立修猷館高等学校<br>修猷大文化祭公式HP</p>
+        </div>
+        <div class="footer-1">
+            <nav class="footer-site-menu">
+                <ul class="footer-nav">
+                    <li class="footer-navtext"><a href="#top">トップ</a></li>
+                    <li class="footer-navtext"><a href="#classkikaku">クラス企画</a></li>
+                    <li class="footer-navtext"><a href="#cultureclub-kikaku">新聞部・文化部企画</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-site-menu">
+                <ul class="footer-nav2">
+                    <li class="footer-navtext"><a href="#timeschedule">タイムスケジュール</a></li>
+                    <li class="footer-navtext"><a href="sub.html#stage">ステージ</a></li>
+                    <li class="footer-navtext"><a href="sub.html#bazaar-cafeteria">食堂・バザー</a></li>
+                    <li class="footer-navtext"><a href="#map">マップ</a></li>
+                </ul>
+            </nav>
+            <p class="copyright"><small>&copy;第80回修猷大文化祭運営委員会広報部署</small></p>
+        </div>
+    </footer>
+
+    <head>
+        <style>
+            ::-webkit-scrollbar {
+                width: 12px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #4FB3E8;
+                border-radius: 6px;
+                box-shadow:
+                    inset 0 1px 2px rgba(255, 255, 255, 0.4),
+                    0 2px 6px rgba(0, 0, 0, 0.4);
+            }
+
+            ::-webkit-scrollbar-track {
+                background: #8E7EDC;
+            }
+
+            .header {
+                position: sticky;
+                top: 0;
+                height: 80px;
+                background-color: rgba(168, 130, 221, 0.95);
+                color: #fff;
+                z-index: 100;
+                border: 1px solid rgba(33, 37, 41, 0.25);
+                box-shadow:
+                    0 1px 2px rgba(33, 37, 41, 0.25),
+                    4px 6px 14px rgba(33, 37, 41, 0.35);
+            }
+
+            .header-width {
+                max-width: 1920px;
+                height: 80px;
+                margin: 0 auto;
+                padding: 0 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .header-logoandtitle {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+            }
+
+            .header-logo {
+                width: 300px;
+                height: 80px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .header-logo img {
+                width: 130%;
+                height: 130%;
+                object-fit: contain;
+            }
+
+            @media screen and (max-width: 340px) {
+                .header-logo {
+                    width: 250px;
+                    height: auto;
+                }
+            }
+
+            @supports (-webkit-touch-callout: none) {
+                .header-logo img {
+                    pointer-events: none;
+                }
+            }
+
+            .site-menu ul {
+                display: flex;
+            }
+
+            .site-menu li {
+                font-size: 1.35rem;
+                line-height: 1.3;
+                margin: 0 8px;
+            }
+
+            .header {
+                width: 100%;
+            }
+
+            .site-menu ul {
+                display: flex;
+                gap: 15px;
+            }
+
+            .site-menu li a {
+                text-decoration: none;
+                color: #fff;
+            }
+
+            .menu {
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                position: relative;
+                display: none;
+                background: none;
+                border: none;
+                flex-shrink: 0;
+            }
+
+            .menu span {
+                display: block;
+                width: 50%;
+                height: 3px;
+                background: #000;
+                position: absolute;
+                left: 25%;
+                transition: .3s;
+            }
+
+            .menu span:nth-of-type(1) {
+                top: 12px;
+            }
+
+            .menu span:nth-of-type(2) {
+                top: 21px;
+            }
+
+            .menu span:nth-of-type(3) {
+                top: 30px;
+            }
+
+            .close span {
+                left: 25%;
+            }
+
+            .close span:nth-of-type(1) {
+                top: 21px;
+                transform: rotate(45deg);
+                width: 50%;
+            }
+
+            .close span:nth-of-type(2) {
+                opacity: 0;
+            }
+
+            .close span:nth-of-type(3) {
+                top: 21px;
+                transform: rotate(-45deg);
+                width: 50%;
+            }
+
+            @media screen and (max-width: 768px) {
+
+                .menu {
+                    display: block;
+                }
+
+                .site-menu ul {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .header-site-menu {
+                    position: fixed;
+                    top: 80px;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100vh - 80px);
+                    background: none;
+                    opacity: 0;
+                    transform: translateY(-10px);
+                    pointer-events: none;
+                    transition: opacity .4s ease, transform .4s ease;
+                }
+
+                .header-site-menu.is-show {
+                    opacity: 1;
+                    transform: translateY(0);
+                    pointer-events: auto;
+                }
+
+                .site-menu li a {
+                    font-size: 2rem;
+                    padding: 10px 0;
+                }
+            }
+
+            @media (max-width: 375px) {
+                .site-menu li a {
+                    font-size: 1.55rem;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+
+                .header {
+                    width: 100%;
+                }
+
+                .header-logoandtitle {
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+                .header-title {
+                    text-align: left;
+                    font-size: 1.3rem;
+                    line-height: 1.3;
+                }
+
+                .menu {
+                    display: block;
+                }
+
+                .header-site-menu {
+                    position: fixed;
+                    top: 80px;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100vh - 80px);
+                    background-color: #FFFEF6;
+                    opacity: 0;
+                    transform: translateY(-10px);
+                    pointer-events: none;
+                    transition: opacity 0.4s ease, transform 0.4s ease;
+                }
+
+                .header-site-menu.is-show {
+                    opacity: 1;
+                    transform: translateY(0);
+                    pointer-events: auto;
+                }
+
+                .site-menu ul {
+                    flex-direction: column;
+                    align-items: center;
+                    padding-top: 40px;
+                }
+
+                .site-menu li a {
+                    font-size: 2rem;
+                    display: block;
+                    padding: 15px 0;
+                    color: #000;
+                    text-decoration: underline;
+                    text-decoration-color: #000;
+                }
+            }
+
+            html,
+            body {
+                max-width: 100%;
+            }
+
+            main {
+                line-height: 1.5;
+            }
+
+            h1 {
+                padding: 0.25em 0.5em;
+                color: #494949;
+                background: transparent;
+                border-left: solid 5px #7db4e6;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .main-header {
+                display: block;
+                margin-top: -80px;
+                padding-top: 80px;
+                background: linear-gradient(to bottom,
+                        #F3F7FF 0%,
+                        #C7D6FF 40%,
+                        #5A6FF0 100%);
+            }
+
+            body {
+                background-color: #ECEAF2;
+            }
+
+            .section-body {
+                background-color: #ECEAF2;
+                padding: 80px 20px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .section-gradient-top {
+                height: 30px;
+                background: linear-gradient(to bottom,
+                        #5A6FF0 0%,
+                        #E0EFDE 100%);
+            }
+
+            .section-gradient-bottom {
+                height: 20px;
+                background: linear-gradient(to bottom,
+                        #E0EFDE 0%,
+                        #ECEAF2 100%);
+            }
+
+            .daiji {
+                display: flex;
+                justify-content: center;
+                object-fit: contain;
+            }
+
+            @supports (-webkit-touch-callout: none) {
+                .daiji img {
+                    pointer-events: none;
+                }
+            }
+
+            .daiji-1 {
+                transform: scale(0.75);
+            }
+
+            .countdown {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                margin: 0;
+                background-color: #f0f0f0;
+            }
+
+            .material {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+
+            .material p {
+                font-size: 1.5em;
+            }
+
+            .left,
+            .right {
+                flex: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 5px;
+            }
+
+
+            .image {
+                width: 130px;
+                height: auto;
+            }
+
+            .rate {
+                font-size: 3rem;
+            }
+
+            .notice {
+                flex: auto;
+                display: flex;
+                flex-flow: column;
+                text-align: center;
+                justify-content: flex-end;
+                align-items: center;
+                font-size: 1.5em;
+            }
+
+            .Lmessage {
+                text-align: center;
+                margin: 0;
+            }
+
+            .Rmessage {
+                text-align: center;
+                margin: 0;
+            }
+
+            .time-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            .time-element {
+                display: flex;
+                flex-flow: column;
+                text-align: center;
+            }
+
+            .colon {
+                font-size: 1em;
+                line-height: 1;
+                margin: 0 0.5rem;
+            }
+
+            .time {
+                width: 50px;
+                height: 50px;
+                margin: .2rem;
+                background-color: rgba(168, 130, 221, 0.50);
+                border-radius: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                border: 1px solid rgba(33, 37, 41, 0.25);
+                box-shadow:
+                    0 1px 2px rgba(33, 37, 41, 0.25),
+                    4px 6px 14px rgba(33, 37, 41, 0.35);
+            }
+
+            .time p {
+                margin: 0;
+                font-size: 2em;
+                text-align: center;
+            }
+
+
+            .timelog p {
+                margin: 0;
+            }
+
+            #day,
+            #hour,
+            #min,
+            #sec {
+                font-size: 3rem;
+                color: #1F1F1F;
+            }
+
+            .date {
+                display: block;
+                width: fit-content;
+                margin: 0 auto;
+                font-weight: bold;
+                font-size: 30px;
+                text-align: center;
+                background-color: rgba(168, 130, 221, 0.50);
+                border-radius: 10px;
+                padding: 10px 10px 10px 10px;
+                border: 1px solid rgba(33, 37, 41, 0.25);
+                box-shadow:
+                    0 1px 2px rgba(33, 37, 41, 0.25),
+                    4px 6px 14px rgba(33, 37, 41, 0.35);
+                color: #1F1F1F;
+            }
+
+            .navtext {
+                font-weight: bold;
+                text-decoration: underline;
+                font-size: 15px;
+            }
+
+            .navtext:hover {
+                transform: scale(1.15);
+                transition: transform 0.3s ease;
+            }
+
+            *,
+            *:before,
+            *:after {
+                -webkit-box-sizing: inherit;
+                box-sizing: inherit;
+            }
+
+            html {
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                font-size: 62.5%;
+            }
+
+            .btn,
+            a.btn,
+            button.btn {
+                font-size: 1.6rem;
+                font-weight: 700;
+                line-height: 1.5;
+                display: inline-block;
+                padding: 1rem 4rem;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+                vertical-align: middle;
+                text-decoration: none;
+                letter-spacing: 0.1em;
+                color: #212529;
+                border-radius: 0.5rem;
+            }
+
+            .another-page-button {
+                text-align: center;
+                padding-top: 20px;
+            }
+
+
+            .btn--orange,
+            a.btn--orange {
+                color: #4A3B00;
+                background-color: rgba(255, 248, 220, 0.85);
+            }
+
+            .btn--orange:hover,
+            a.btn--orange:hover {
+                color: #4A3B00;
+                background: rgba(255, 248, 220, 0.95);
+                transform: scale(1.05);
+                transition: transform 0.3s ease;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+            }
+
+            .another-page-button-sub {
+                text-align: center;
+                padding-top: 20px;
+            }
+
+
+            .btn--orange2,
+            a.btn--orange2 {
+                color: #2B2F5A;
+                background-color: #D6D1EE;
+            }
+
+            .btn--orange2:hover,
+            a.btn--orange2:hover {
+                color: #2B2F5A;
+                transform: scale(1.05);
+                transition: transform 0.3s ease;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+            }
+
+            a.btn--radius2 {
+                border-radius: 100vh;
+            }
+
+            .slogan {
+                background-color: #E0EFDE;
+                padding-top: 30px;
+            }
+
+            .miryo {
+                display: flex;
+                justify-items: center;
+                background-color: #E0EFDE;
+            }
+
+            .miryo-daiji {
+                padding: 10px 10px 10px 10px;
+                margin: 0 auto;
+                width: 205px;
+            }
+
+            .miryo-shousai {
+                font-size: 19px;
+                background-color: rgba(255, 255, 255, 0.3);
+                color: #000;
+                margin: auto 50px;
+                padding: 10px;
+                border-radius: 7px;
+                border: 1px solid rgba(33, 37, 41, 0.25);
+                box-shadow:
+                    0 1px 2px rgba(33, 37, 41, 0.25),
+                    4px 6px 14px rgba(33, 37, 41, 0.35);
+            }
+
+            @media screen and (max-width: 768px) {
+                .miryo {
+                    flex-wrap: wrap;
+                }
+
+                .miryo-shousai {
+                    margin: auto 15px;
+                }
+            }
+
+            .miryo-shousai-1 {
+                display: block;
+                text-align: left;
+            }
+
+            .miryo-shousai-2 {
+                display: block;
+            }
+
+            .message {
+                padding: 80px 20px;
+            }
+
+            .message-box {
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+                margin-bottom: 24px;
+                padding: 10px;
+                background-color: rgba(179, 242, 221, 0.5);
+                border-radius: 7px;
+                border: 1px solid rgba(33, 37, 41, 0.25);
+                box-shadow:
+                    0 1px 2px rgba(33, 37, 41, 0.25),
+                    4px 6px 14px rgba(33, 37, 41, 0.35);
+            }
+
+            .message-photo {
+                width: 300px;
+                height: auto;
+                flex-shrink: 0;
+            }
+
+            .message-text {
+                flex: 1;
+                line-height: 1.6;
+            }
+
+            .name {
+                display: block;
+                text-align: center;
+                font-size: 26px;
+                font-weight: bold;
+            }
+
+            .yakushoku {
+                display: block;
+                text-align: center;
+                font-size: 18px;
+                margin-bottom: 10px;
+                margin-top: -30px;
+                border-bottom: 1.5px solid #212529;
+            }
+
+            .section-unified-bg {
+                background:
+                    linear-gradient(to bottom,
+                        #ECEAF2,
+                        rgba(224, 141, 121, 0.4) 20px);
+                padding-top: 20px;
+            }
+
+            .timeschedule {
+                padding: 80px 20px;
+            }
+
+            .timeschedule-box {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .timeschedule-picture {
+                width: 100%;
+                height: auto;
+                margin: auto;
+                border: 1.5px solid #212529;
+                padding: 30px 30px 30px 30px;
+                border-radius: 10px;
+            }
+
+            .timeschedule-text {
+                text-align: center;
+                font-size: 2rem;
+                border-bottom: double 5px #ffffff;
+            }
+
+            .tmb {
+                width: 100%;
+            }
+
+            .tmb_img {
+                width: 100%;
+                height: auto;
+            }
+
+            .tmb_img:hover {
+                cursor: pointer;
+            }
+
+            .popup {
+                z-index: 10;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transform: scale(0);
+                background-color: rgba(0, 0, 0, 0.8);
+                opacity: 0;
+                transition: opacity 0.3s, transform 0s 0.3s;
+            }
+
+            .popup__btn {
+                display: block;
+                z-index: 13;
+                position: absolute;
+                top: 1vh;
+                right: 1vh;
+                width: 5vh;
+                height: 5vh;
+                cursor: pointer;
+            }
+
+            .popup__btn::before,
+            .popup__btn::after {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                height: 2px;
+                margin-top: -1px;
+                background-color: #fff;
+                content: '';
+            }
+
+            .popup__btn::before {
+                transform: rotate(45deg);
+            }
+
+            .popup__btn::after {
+                transform: rotate(-45deg);
+            }
+
+            .popup__btnarea {
+                z-index: 12;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .popup__img {
+                z-index: 11;
+                position: absolute;
+                text-align: center;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
+                height: 90%;
+            }
+
+            .popup__img img {
+                width: 101-80%;
+                height: 100%;
+                object-fit: contain;
+                padding-top: 110px;
+            }
+
+            input[type="checkbox"] {
+                display: none;
+            }
+
+            input[type="checkbox"]:checked~.popup {
+                transform: scale(1);
+                opacity: 1;
+                transition: opacity 0.3s;
+            }
+
+            .popup__img {
+                overflow: hidden;
+                cursor: grab;
+                touch-action: none;
+            }
+
+            .popup__img img {
+                transition: transform 0.05s ease;
+                transform-origin: center center;
+                user-select: none;
+                -webkit-user-drag: none;
+            }
+
+            .annai {
+                margin-top: -80px;
+                padding-top: 80px;
+            }
+
+            .map {
+                width: 80%;
+                height: 66.6vh;
+                margin: 0 auto;
+                position: relative;
+                border: 1px solid rgba(33, 37, 41, 0.25);
+                box-shadow:
+                    0 1px 2px rgba(33, 37, 41, 0.25),
+                    4px 6px 14px rgba(33, 37, 41, 0.35);
+            }
+
+            .map iframe {
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+
+            .gradation {
+                height: 80px;
+                background: linear-gradient(to bottom,
+                        rgba(224, 141, 121, 0.4) 0%,
+                        #ECEAF2 100%);
+            }
+
+            .main-header {
+                display: block;
+                margin-top: -80px;
+                padding-top: 80px;
+            }
+
+            .Container1,
+            .Container2,
+            .Container3,
+            .Container4,
+            .Container5,
+            .Container6,
+            .Container7 {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .Box-Container1,
+            .Box-Container2,
+            .Box-Container3,
+            .Box-Container4,
+            .Box-Container5,
+            .Box-Container6,
+            .Box-Container7 {
+                display: flex;
+                gap: 10px;
+                padding: 10px;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+                touch-action: pan-x;
+                scrollbar-width: none;
+            }
+
+            .Box-Container1::-webkit-scrollbar,
+            .Box-Container2::-webkit-scrollbar,
+            .Box-Container3::-webkit-scrollbar,
+            .Box-Container4::-webkit-scrollbar,
+            .Box-Container5::-webkit-scrollbar,
+            .Box-Container6::-webkit-scrollbar,
+            .Box-Container7::-webkit-scrollbar {
+                display: none;
+            }
+
+            .Box,
+            .Box1,
+            .Box2,
+            .Box4,
+            .Box5,
+            .Box6,
+            .Box7 {
+                flex-shrink: 0;
+                width: 350px;
+                height: 400px;
+                border-radius: 10px;
+                background-color: #DED9F2;
+                box-shadow:
+                    0 1px 2px rgba(33, 37, 41, 0.25),
+                    4px 6px 14px rgba(33, 37, 41, 0.35);
+            }
+
+            .Arrow1,
+            .Arrow2,
+            .Arrow3,
+            .Arrow4,
+            .Arrow5,
+            .Arrow6,
+            .Arrow7 {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 30px;
+                height: 30px;
+                background-color: rgba(0, 0, 0, 0.3);
+                color: #fff;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                z-index: 10;
+            }
+
+            .Arrow1.left,
+            .Arrow2.left,
+            .Arrow3.left,
+            .Arrow4.left,
+            .Arrow5.left,
+            .Arrow6.left,
+            .Arrow7.left {
+                left: 0;
+            }
+
+            .Arrow1.right,
+            .Arrow2.right,
+            .Arrow3.right,
+            .Arrow4.right,
+            .Arrow5.right,
+            .Arrow6.right,
+            .Arrow7.right {
+                right: 0;
+            }
+
+            @media (min-width: 769px) {
+
+                .Box-Container1,
+                .Box-Container2,
+                .Box-Container3,
+                .Box-Container4,
+                .Box-Container5,
+                .Box-Container6,
+                .Box-Container7 {
+                    overflow: hidden;
+                }
+            }
+
+            @media (max-width: 768px) {
+
+                .Box-Container1,
+                .Box-Container2,
+                .Box-Container3,
+                .Box-Container4,
+                .Box-Container5,
+                .Box-Container6,
+                .Box-Container7 {
+                    overflow-x: auto;
+                    transform: none !important;
+                }
+
+                .Arrow1,
+                .Arrow2,
+                .Arrow3,
+                .Arrow4,
+                .Arrow5,
+                .Arrow6,
+                .Arrow7 {
+                    display: none;
+                }
+            }
+
+            .Box-Container1,
+            .Box-Container2,
+            .Box-Container3,
+            .Box-Container4,
+            .Box-Container5,
+            .Box-Container6,
+            .Box-Container7 {
+                overflow-x: auto;
+
+                -webkit-overflow-scrolling: touch;
+            }
+
+            @media (min-width: 768px) {
+
+                .Box-Container1,
+                .Box-Container2,
+                .Box-Container3,
+                .Box-Container4,
+                .Box-Container5,
+                .Box-Container6,
+                .Box-Container7 {
+                    margin-left: 30px;
+                    margin-right: 30px;
+                }
+
+            }
+
+            .Box-Container1::-webkit-scrollbar,
+            .Box-Container2::-webkit-scrollbar,
+            .Box-Container3::-webkit-scrollbar,
+            .Box-Container4::-webkit-scrollbar,
+            .Box-Container5::-webkit-scrollbar,
+            .Box-Container6::-webkit-scrollbar,
+            .Box-Container7::-webkit-scrollbar {
+                display: none;
+            }
+
+            .Box-Container1,
+            .Box-Container2,
+            .Box-Container3,
+            .Box-Container4,
+            .Box-Container5,
+            .Box-Container6,
+            .Box-Container7 {
+                scrollbar-width: none;
+            }
+
+            .Box-Container1,
+            .Box-Container2,
+            .Box-Container3,
+            .Box-Container4,
+            .Box-Container5,
+            .Box-Container6,
+            .Box-Container7 {
+                -ms-overflow-style: none;
+            }
+
+
+            .Box-Container1,
+            .Box-Container2,
+            .Box-Container3,
+            .Box-Container4,
+            .Box-Container5,
+            .Box-Container6,
+            .Box-Container7 {
+                overflow-x: auto;
+                display: flex;
+
+                scroll-snap-type: x mandatory;
+            }
+
+            .Box,
+            .Box1,
+            .Box2,
+            .Box4,
+            .Box5,
+            .Box6,
+            .Box7 {
+                flex-shrink: 0;
+                scroll-snap-align: start;
+            }
+
+            .class-kikaku {
+                display: block;
+                margin-top: -80px;
+                padding-top: 80px;
+            }
+
+            .place {
+                margin-left: 2rem;
+            }
+
+            .title {
+                border-top: solid 1.5px #000000;
+                display: block;
+                margin-left: 10px;
+                margin-right: 10px;
+                font-size: 18px;
+            }
+
+            .engeki-title {
+                border-top: solid 1.5px #000000;
+                display: block;
+                margin-left: 10px;
+                margin-right: 10px;
+                max-width: 330px;
+                align-items: center;
+            }
+
+            .img-class {
+                max-height: 200px;
+                display: block;
+                margin: auto;
+            }
+
+            .class {
+                text-align: center;
+            }
+
+            .class-shousai {
+                min-width: 0;
+                max-width: 330px;
+                overflow-wrap: break-word;
+
+            }
+
+            .cultureclub-kikaku {
+                display: block;
+                margin-top: -80px;
+                padding-top: 80px;
+            }
+
+            .tenji-volunteer {
+                display: block;
+                margin-top: -80px;
+                padding-top: 80px;
+            }
+
+            .space {
+                height: 20px;
+            }
+
+            .shuyu-map {
+                display: block;
+                margin: 0 auto;
+                max-height: 80vh;
+                width: auto;
+            }
+
+            .onegai {
+                gap: 20px;
+                margin-bottom: 24px;
+                padding: 10px;
+                background-color: rgba(179, 242, 221, 0.5);
+                border-radius: 7px;
+                border: 1px solid rgba(33, 37, 41, 0.25);
+                box-shadow:
+                    0 1px 2px rgba(33, 37, 41, 0.25),
+                    4px 6px 14px rgba(33, 37, 41, 0.35);
+            }
+
+            .footer {
+                background-color: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                padding-bottom: 30px;
+                border: 1px solid rgba(33, 37, 41, 0.25);
+                box-shadow:
+                    0 1px 2px rgba(33, 37, 41, 0.25),
+                    4px 6px 14px rgba(33, 37, 41, 0.35);
+            }
+
+            .footer-0 {
+                align-items: center;
+                justify-content: center;
+            }
+
+            .footer-0 a {
+                display: flex;
+                align-items: center;
+            }
+
+            .footer-logo {
+                max-width: 80vw;
+                margin: 0 auto;
+                max-height: 80px;
+                display: block;
+            }
+
+            @supports (-webkit-touch-callout: none) {
+                .footer-logo img {
+                    pointer-events: none;
+                }
+            }
+
+            .footer-title {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .footer-0 p {
+                line-height: 1;
+            }
+
+            .footer-nav {
+                font-size: 1rem;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                border-top: 1.5px solid #ECEAF2;
+            }
+
+            .footer-nav2 {
+                font-size: 1rem;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @media screen and (max-width: 768px) {
+                .footer-nav {
+                    font-size: 1rem;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    display: block;
+                    text-align: center;
+                    justify-content: center;
+                    max-width: 80%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    border-top: 1.5px solid #ECEAF2;
+                }
+
+                .footer-nav2 {
+                    font-size: 1rem;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    display: block;
+                    text-align: center;
+                    justify-content: center;
+                    max-width: 80%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+
+            .footer-site-menu ul li {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .footer-navtext {
+                font-weight: bold;
+                text-decoration: underline;
+                font-size: 20px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                margin-top: 15px;
+            }
+
+            .footer-navtext:hover {
+                transform: scale(1.15);
+                transition: transform 0.3s ease;
+            }
+
+            .copyright {
+                margin-top: 5px;
+                text-align: center;
+            }
+
+            @media screen and (max-width: 768px) {
+                .message-box {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .message-photo {
+                    width: 80%;
+                    max-width: 320px;
+                }
+
+                .message-text {
+                    width: 100%;
+                }
+
+                .timeschedule-box {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 20px;
+                    margin-bottom: 24px;
+                    padding: 10px;
+                }
+
+                .timeschedule-picture {
+                    width: 100%;
+                }
+            }
+
+            *,
+            ::before,
+            ::after {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            ul,
+            ol {
+                list-style: none;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            body {
+                font-family: sans-serif;
+                font-size: 16px;
+                color: #000000;
+                line-height: 1;
+                background-color: #ffffff;
+            }
+
+            img {
+                max-width: 100%;
+            }
+
+
+        .l-header--container {
+                display: none;
+            }
+
+            .l-body__top {
+                display: none;
+            }
+
+            .l-body-sub {
+                display: none;
+                width: 0;
+                height: 0;
+            }
+
+            .l-footer--container {
+                display: none;
+            }
+
+            .l-body-main__data {
+                display: none;
+            }
+
+            .l-header {
+                display: none;
+            }
+
+            .u-btn__page {
+                display: none;
+            }
+
+            .l-body contents {
+                margin: 0;
+            }
+
+            #main {
+                margin: 0;
+            }
+
+            main {
+                margin: 0;
+            }
+
+            .l-body {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            html {
+                margin-top: 0 !important;
+            }
+
+            .l-body-main {
+              width: 100% !important;
+            }
+
+            .l-body__container {
+                display: block;
+            }
+
+            #content {
+                width: 100vw;
+                overflow: hidden;
+                font-family: "Noto Serif JP", serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 16px;
+                color: #000000;
+            }
+
+            @media (min-width: 992px) {
+                main {
+                    margin: 0;
+                }
+            }
+
+            .l-body-main__body a {
+                text-decoration: none;
+            }
+
+            .wp-block-columns {
+                margin-bottom: 0;
+            }
+
+            .contents .l-body-main__container>div {
+                margin-bottom: 0;
+            }
+        </style>
+    </head>
+</body>
+
+</html>
